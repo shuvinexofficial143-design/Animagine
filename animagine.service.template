@@ -1,0 +1,16 @@
+[Unit]
+Description=Animagine XL via ComfyUI
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+User=root
+WorkingDirectory=__ROOT__/ComfyUI
+ExecStart=__ROOT__/.venv/bin/python main.py --listen 127.0.0.1 --port 8188
+Restart=on-failure
+RestartSec=5
+Environment=PYTHONUNBUFFERED=1
+
+[Install]
+WantedBy=multi-user.target
