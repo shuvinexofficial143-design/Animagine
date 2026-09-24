@@ -1,0 +1,10 @@
+.venv/
+ComfyUI/
+models/
+outputs/
+logs/
+*.safetensors
+*.ckpt
+*.pt
+*.pth
+.env
